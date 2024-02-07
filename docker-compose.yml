@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  mc:
+  minecraft:
     image: itzg/minecraft-server
     tty: true
     stdin_open: true
@@ -11,4 +11,16 @@ services:
       EULA: "TRUE"
     volumes:
       # attach the relative directory 'data' to the container's /data path
-      - ./data:/data
+      - /home/cyrof/mc-test:/data
+    
+
+  ngrok: 
+    image: ngrok/ngrok:latest
+    restart: unless-stopped
+    environment:
+      - NGROK_AUTHTOKEN=<ngrok authtoken>
+    command: 'tcp minecraft:25565'
+    ports:
+      - 4040:4040
+    links:
+      - minecraft
