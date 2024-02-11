@@ -1,5 +1,8 @@
 version: "3.8"
 
+networks:
+  mc-server:
+
 services:
   minecraft:
     image: itzg/minecraft-server
@@ -13,6 +16,8 @@ services:
       # attach the relative directory 'data' to the container's /data path
       - /home/cyrof/mc-test:/data
     restart: on-failure:3
+    networks:
+      - mc-server
     
 
   ngrok: 
@@ -23,5 +28,5 @@ services:
     command: 'tcp minecraft:25565'
     ports:
       - 4040:4040
-    links:
-      - minecraft
+    networks:
+      - mc-server
