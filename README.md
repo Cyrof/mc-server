@@ -24,7 +24,7 @@ $ docker run -d -p 25565:25565 -e EULA=TRUE -v <server_path>:/data itzg/minecraf
 **IMPORTANT** change the <server_path> to the path of your minecraft server to link to docker container. Please ensure that you have port 25565 forwarded on your router for external access to the server.
 
 ### Backup Script
-The '**`mc-backup-script`**' folder contains a Python script '**`backup.py`**', designed to automate the backup process for your Minecraft server data.
+The '**mc-backup-script**' folder contains a Python script '**backup.py**', designed to automate the backup process for your Minecraft server data.
 
 ### Setup 
 1. Navigate into the folder:
@@ -43,13 +43,13 @@ The '**`mc-backup-script`**' folder contains a Python script '**`backup.py`**', 
     ```bash 
     $ pip install -r requirements.txt
     ```
-5. Create a '**`.env`**' file in the '**`mc-backup-script`**' folder.
-6. Add the following variables to the '**`.env`**' file:
+5. Create a '**.env**' file in the '**mc-backup-script**' folder.
+6. Add the following variables to the '**.env**' file:
    ```plaintext
    SRC=<path-to-mc-server-folder>
    DST=<path-to-backup-folder>
    ```
-   Replace '**`<path-to-mc-server-folder>`**' with the full path to your Minecraft server folder containing the data you want to back up, and '**`<path-to-backup-folder>`**' with the full path where you want to store your backups.
+   Replace '**<path-to-mc-server-folder>**' with the full path to your Minecraft server folder containing the data you want to back up, and '**<path-to-backup-folder>**' with the full path where you want to store your backups.
 
 ### Usage
 Set up cronjob with 5 min interval to run this python script.
