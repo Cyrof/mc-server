@@ -27,7 +27,7 @@ def zipFolder(folderName):
     try:
         shutil.make_archive(f"{folderName}", "zip", folderName) # Creating a zip archieve of the folder
     except Exception as e:
-        print("An error occured\n", e) # Handling errors
+        print("An error occured as zip folder\n", e) # Handling errors
 
 
 def createBackup(env_var, now):
@@ -53,7 +53,7 @@ def createBackup(env_var, now):
             print("Backup zipped")
             shutil.rmtree(backup_folder) # Removing the backup folder
         except Exception as e:
-            print("An error occured\n", e) # Handling errors
+            print("An error occured at creating backup\n", e) # Handling errors
 
 def old_file(filename, now):
     """
