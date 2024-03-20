@@ -60,3 +60,5 @@ Feel free to contribute to this project by forking this repository and creating 
 ## Issues
 If you encounter any issues or have suggestions for improvements, please open an issue in the repository.
 
+## License 
+This project is licensed under the [**Apache 2.0 License**](https://github.com/Cyrof/mc-server/blob/main/LICENSE)
